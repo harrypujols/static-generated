@@ -1,0 +1,17 @@
+{% set page.title = "Home" %}
+{% set page.nav = "home" %}
+{% extends 'default.html' %}
+{% block head %}
+<link rel="stylesheet" href="css/homepage.css">
+{% endblock %}
+{% block content %}
+{% include "partials/_indicator.html" %}
+{% include "partials/_welcome.html" %}
+{% include "partials/_portfolio.html" %}
+{% include "partials/_contact.html" %}
+{% include "partials/_updates.html" %}
+{% include "partials/_thanks.html" %}
+{% endblock %}
+{% block footer %}
+<script src="/js/homepage.js"></script>
+{% endblock %}

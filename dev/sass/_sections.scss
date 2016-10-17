@@ -1,0 +1,59 @@
+.huge-text {
+  text-align: center;
+  font-size: 100px;
+
+  @include breakpoint(phone) {
+    margin: 10px auto;
+  }
+}
+
+h2.huge-text {
+  @include breakpoint(phone) {
+    font-size: 50px;
+  }
+}
+
+// cartoon
+.static {
+  position: fixed;
+  bottom: 40px;
+  text-align: center;
+
+  @include breakpoint(phone) {
+    position: static;
+    margin: 20px 0;
+  }
+}
+
+.cartoon {
+  &.hide {
+    opacity: 0;
+  }
+}
+
+.cartoon div {
+  display: none;
+
+  &.visible {
+    display: inline-block;
+  }
+
+  @include breakpoint(mobile) {
+    width: 80px;
+  }
+}
+
+[id=thanks] {
+  h2 {
+    margin-top: 25%;
+
+    @include breakpoint(phone) {
+      margin-top: 55%;
+    }
+  }
+}
+
+.inverse {
+  background: $black;
+  color: $white;
+}

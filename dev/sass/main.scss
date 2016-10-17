@@ -1,0 +1,187 @@
+// ==========================================================================
+// Settings
+// ==========================================================================
+@import "compass";
+
+// ==========================================================================
+// Colors
+// ==========================================================================
+$white: #ffffff !default;
+$black: #000000 !default;
+$grey: #dddddd !default;
+$light-grey: #f8f8f8 !default;
+$blue: #00a3fa !default;
+$green: #90d548 !default;
+$red: #ff0000 !default;
+
+// ==========================================================================
+// Mixins
+// ==========================================================================
+@import "mixins";
+
+// ==========================================================================
+// Variables
+// ==========================================================================
+$breakpoint: 480px;
+$primary-font: 'Inconsolata', monospace;
+$display-font: 'Source Code Pro', monospace;
+$font-size: 16px !default;
+$light: 300;
+$normal: 400;
+$bold: 800;
+
+// ==========================================================================
+// Normalize
+// ==========================================================================
+@import "normalize";
+
+/* ==========================================================================
+Fonts
+========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+/* ==========================================================================
+Sprites
+========================================================================== */
+[class*="sprite-"] {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+// @import "sprite/*.png";
+// $sprite-sprite-dimensions: true;
+// @include all-sprite-sprites;
+
+/* ==========================================================================
+Tags
+========================================================================== */
+
+body {
+	font-family: $primary-font;
+	font-weight: $light;
+	font-size: $font-size;
+	line-height: 1.4;
+	z-index: 1;
+}
+
+a {
+	color: $blue;
+
+	&:hover {
+		color: $red;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+code {
+	font-family: $display-font;
+	font-size: 14px;
+}
+
+table {
+	width: 100%;
+}
+
+th, td {
+	border-bottom: thin solid $grey;
+	text-align: left;
+	padding: 10px 0;
+}
+
+blockquote {
+  background: $light-grey;
+  border-left: 10px solid $grey;
+  margin: 20px 10px;
+  padding: 5px 10px;
+
+	cite {
+		display: block;
+		color: $grey;
+
+		&:before {
+			content:"\2013\2013";
+			margin-right: 5px;
+		}
+	}
+}
+
+figure {
+	margin-bottom: 0;
+}
+
+figcaption {
+	font-size: 12px;
+	color: $grey;
+	text-align: center;
+}
+
+hr {
+	border: 1px solid $light-grey;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+}
+
+/* ==========================================================================
+Base
+========================================================================== */
+%clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.clearfix {
+	@extend %clearfix;
+}
+
+.container {
+	max-width: $breakpoint;
+	margin: 0 auto;
+	padding: 10px;
+	position: relative;
+}
+
+/* ==========================================================================
+Navigation
+========================================================================== */
+
+.navbar {
+	padding: 0;
+	margin: 10px;
+	li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+}
+
+.active {
+	a {
+		color: $black;
+		text-decoration: none;
+	}
+}
+
+/* ==========================================================================
+Content
+========================================================================== */
+
+.date {
+	font-size: 12px;
+}
+
+.post-title {
+	font-size: 25px;
+}
+
+.footer {
+	font-size: 14px;
+}

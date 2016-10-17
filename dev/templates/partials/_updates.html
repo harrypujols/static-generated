@@ -1,0 +1,13 @@
+<div class="section" id="updates">
+  <div class="container">
+      <h2>Updates</h2>
+      <table>
+        {% for post in site.posts %}
+        <tr>
+          <td class="date">{{ post.date | date('M j, Y') }}</td>
+          <td class="post"><a href="{{ post.url }}">{{ post.title }}</a></td>
+        </tr>
+        {% endfor %}
+      </table>
+  </div>
+</div>

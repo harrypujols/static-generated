@@ -1,0 +1,71 @@
+body {
+	z-index: 1;
+	@include breakpoint(mobile) {
+		font-size: 20px;
+	}
+
+	@include breakpoint(phone) {
+		font-size: 16px;
+	}
+}
+
+.section:before {
+	content: "\00a0";
+}
+
+.section {
+  height: $section-size;
+}
+
+.container {
+	max-width: $breakpoint;
+	margin: 0 auto;
+	padding: 10px 40px;
+	position: relative;
+
+	@include breakpoint(phone) {
+		padding: 15px;
+	}
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+    font-weight: $normal;
+    font-size: emCalc(100);
+		word-wrap: break-word;
+
+		@include breakpoint(mobile) {
+      font-size: emCalc(50);
+    }
+
+		@include breakpoint(phone) {
+			margin: 0;
+			font-size: emCalc(40);
+			text-align: center;
+		}
+}
+
+a {
+  color: $lizard-blue;
+  &:hover {
+    color: $lizard-red;
+  }
+}
+
+p {
+  padding: 0 15px;
+}
+
+iframe {
+	margin: 0 auto;
+	max-width: 100% !important;
+}
+
+%clearfix:after {
+  content: "";
+  display: table;
+	clear: both;
+}

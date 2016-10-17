@@ -1,0 +1,23 @@
+@import "normalize";
+
+$ie-blue: #2c75e8;
+
+body {
+	background: black;
+	color: $ie-blue;
+	text-align: center;
+	line-height: 1;
+}
+
+h1, p {
+	margin: 10px;
+}
+
+.container {
+	margin-top: 15%;
+}
+
+.sprite-ie {
+	display: block;
+	margin: 30px auto;
+}
